@@ -37,7 +37,6 @@ class View:
         self.__show_info_btn.grid(row=1, column=0, sticky="w")
         # self.__show_info_btn.pack()
 
-
         # Cities Combobox
         self.cities_combobox = ttk.Combobox(self.master, width=30)
         self.cities_combobox.grid(row=0, column=1, sticky="w")
@@ -47,8 +46,10 @@ class View:
 
     def set_cities_list(self, cities):
         self.cities_combobox['values'] = cities
+
     def set_file_path_label(self, path):
         self.file_path_label['text'] = path
+
     def set_info_button_command(self, command):
         self.__show_info_btn.config(command=command)
 
