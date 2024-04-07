@@ -40,7 +40,7 @@ class EditSettingsDialog(simpledialog.Dialog):
         cities_text = self.__cities_list_text_area.get("1.0", tk.END).strip()
         self.updated_cities_list = [city.strip() for city in cities_text.split(',') if city.strip()]
 
-    def __on_enter_pressed(self, event):
+    def __on_enter_pressed(self, _event):
         """Insert a newline in the ScrolledText widget when Enter is pressed."""
         self.__seller_info_text_entry.insert(tk.INSERT, "\n")
         return "break"  # Prevent the event from propagating to the dialog

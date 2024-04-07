@@ -3,7 +3,7 @@ import os
 
 
 class Model:
-    def __init__(self, settings_file=r"C:\Users\vandal\PycharmProjects\PaidInFull\settings.json"):
+    def __init__(self, settings_file=r"settings.json"):
         self.__settings_file = settings_file
         self.settings = self.__load_settings()
 
