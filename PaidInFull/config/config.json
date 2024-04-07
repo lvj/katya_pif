@@ -1,0 +1,13 @@
+{
+    "APP_NAME": "PAID IN FULL",
+    "FILE_MENU": "Plik",
+    "OPEN_CSV_FILE": "Otwórz plik z fakturami",
+    "SETTINGS": "Ustawienia",
+    "PROCESS_DATA_BUTTON": "Przetwórz dane",
+    "SHOW_SELLER_INFO_BUTTON": "Pokaż dane sprzedawcy",
+    "ADD_CITY": "Add City",
+    "ENTER_CITY_NAME": "Enter a city name:",
+    "EDIT_SETTINGS": "Edytuj ustawienia:",
+    "SELLER_INFO_TEXT": "Nazwa sprzedawcy:",
+    "CITIES_LIST": "Lista miast (rozdzielona przecinkami):"
+}
