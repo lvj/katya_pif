@@ -2,6 +2,7 @@ import tkinter as tk
 from controllers.controller import Controller
 from config.app_config import AppConfig
 
+# todo
 app_config = AppConfig()
 
 
