@@ -28,11 +28,12 @@ class Controller:
         self.view.show_message(info)
         # self.view.show_message(info.replace('<br/>', '\n'))
 
-    @staticmethod
-    def __open_csv_file():
+    # @staticmethod
+    def __open_csv_file(self):
         file_path = filedialog.askopenfilename(filetypes=[("Pliki CSV", "*.csv")])
         if file_path:
             messagebox.showinfo("Info", f"Wybrany plik: {file_path}")
+            self.view.set_file_path_label(file_path)
 
     def __edit_settings(self):
         current_seller_info = self.model.get_seller_info()

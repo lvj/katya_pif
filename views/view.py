@@ -12,6 +12,7 @@ class View:
         self.__show_info_btn = None
         self.__file_menu = None
         self.__menubar = None
+        self.file_path_label = None
         self.__configure_window()
         self.__create_widgets()
 
@@ -26,21 +27,28 @@ class View:
         self.__file_menu.add_command(label=self.app_config.SETTINGS)
         self.__menubar.add_cascade(label=self.app_config.FILE_MENU, menu=self.__file_menu)
 
-        self.process_data_button = ttk.Button(self.master, text=self.app_config.PROCESS_DATA_BUTTON)
-        self.process_data_button.pack()
+        self.process_data_button = ttk.Button(self.master, text=self.app_config.PROCESS_DATA_BUTTON, width=30)
+        self.process_data_button.grid(row=0, column=0, sticky="w")
+        # self.process_data_button.pack()
 
         self.master.config(menu=self.__menubar)
         # Seller Info Button
-        self.__show_info_btn = ttk.Button(self.master, text=self.app_config.SHOW_SELLER_INFO_BUTTON)
-        self.__show_info_btn.pack(pady=20)
+        self.__show_info_btn = ttk.Button(self.master, text=self.app_config.SHOW_SELLER_INFO_BUTTON, width=30)
+        self.__show_info_btn.grid(row=1, column=0, sticky="w")
+        # self.__show_info_btn.pack()
+
 
         # Cities Combobox
-        self.cities_combobox = ttk.Combobox(self.master)
-        self.cities_combobox.pack(pady=10)
+        self.cities_combobox = ttk.Combobox(self.master, width=30)
+        self.cities_combobox.grid(row=0, column=1, sticky="w")
+        # self.cities_combobox.pack()
+        self.file_path_label = ttk.Label(text="pusty")
+        self.file_path_label.grid(row=2, column=0, sticky="w")
 
     def set_cities_list(self, cities):
         self.cities_combobox['values'] = cities
-
+    def set_file_path_label(self, path):
+        self.file_path_label['text'] = path
     def set_info_button_command(self, command):
         self.__show_info_btn.config(command=command)
 

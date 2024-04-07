@@ -6,6 +6,7 @@ class Model:
     def __init__(self, settings_file=r"settings.json"):
         self.__settings_file = settings_file
         self.settings = self.__load_settings()
+        self.file_path = "empty"
 
     def __load_settings(self):
         if not os.path.exists(self.__settings_file):
