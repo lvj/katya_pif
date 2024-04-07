@@ -16,10 +16,7 @@ class View:
         self.__create_widgets()
 
     def __configure_window(self):
-        # Set the window icon; adjust the path to your icon file
         self.master.iconbitmap(r'_resources/images/ico.ico')
-
-        # Set the window size and position (e.g., 800x600 window size, and position at 100,100)
         self.master.geometry('800x600+100+100')
 
     def __create_widgets(self):
