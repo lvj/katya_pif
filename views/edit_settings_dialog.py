@@ -41,7 +41,15 @@ class EditSettingsDialog(simpledialog.Dialog):
                                     .replace("\t", "\t"))
         cities_text = self.__cities_list_text_area.get("1.0", tk.END).strip()
         self.updated_cities_list = [city.strip() for city in cities_text.split(',') if city.strip()]
+    # def cancel(self, event=None):
 
+    # def cancel(self, event=None):
+    #     self.updated_seller_info = self.__initial_seller_info
+    #     self.updated_cities_list = self.__initial_cities_list
+    #     super().cancel()
+    # def buttonbox(self):
+    #     super().buttonbox()
+    #     self.protocol("WM_DELETE_WINDOW", self.cancel)
     def __on_enter_pressed(self, _event):
         self.__seller_info_text_entry.insert(tk.INSERT, "\n")
         return "break"  # Prevent the event from propagating to the dialog

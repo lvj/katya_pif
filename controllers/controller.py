@@ -41,7 +41,8 @@ class Controller:
         dialog = EditSettingsDialog(self.view.master, self.__app_config.EDIT_SETTINGS, current_seller_info,
                                     current_cities_list)
 
-        if hasattr(dialog, 'updated_seller_info') and hasattr(dialog, 'updated_cities_list'):
+        # if hasattr(dialog, 'updated_seller_info') and hasattr(dialog, 'updated_cities_list'):
+        if dialog.updated_cities_list is not None and dialog.updated_seller_info is not None:
             self.model.settings['seller_info_text'] = dialog.updated_seller_info
             self.model.settings['cities_list'] = dialog.updated_cities_list
             self.model.save_settings(self.model.settings)

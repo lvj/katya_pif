@@ -42,7 +42,7 @@ class View:
         self.cities_combobox.grid(row=0, column=1, sticky="w")
         # self.cities_combobox.pack()
         self.file_path_label = ttk.Label(text="pusty")
-        self.file_path_label.grid(row=2, column=0, sticky="w")
+        self.file_path_label.grid(row=2, column=0, sticky="w", columnspan=2)
 
     def set_cities_list(self, cities):
         self.cities_combobox['values'] = cities
